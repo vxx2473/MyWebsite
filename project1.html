@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction Using Hybrid Deep Learning and Machine Learning Models | Yalavarthi Vignesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html#top" class="brand">YV</a>
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Car Price Prediction Using Hybrid Deep Learning and Machine Learning Models</h1>
+                <p class="subtitle">Built a hybrid ensemble model combining deep learning (CNN, RNN, LSTM) and machine learning (Random Forest) models to accurately predict the prices of preowned cars.</p>
+
+                <div class="project-meta" style="margin-top: 18px; color: var(--muted);">
+                    <strong class="accent">Tech Stack:</strong> Python, TensorFlow, Keras, scikit-learn, Flask
+                </div>
+
+                <div class="project-actions" style="margin-top: 18px; display: flex; gap: 12px;">
+                    <a class="btn primary" href="https://github.com/your-github/your-repo" target="_blank" rel="noopener">GitHub</a>
+                    <a class="btn ghost" href="https://your-demo-link.example.com" target="_blank" rel="noopener">Live Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Overview</h2>
+                <h3>Problem</h3>
+                <p>Accurately predicting the prices of preowned cars is challenging due to the wide variation in car features (brand, model, year, mileage, fuel type, etc.) and the non-linear relationships between them. Traditional ML models often capture structured patterns well but struggle with temporal or sequential dependencies, while deep learning models excel at complex feature interactions but can overfit or require large datasets. The challenge was to design a solution that leverages the strengths of both.</p>
+                <h3>Approach</h3>
+                <p>
+                    <ul>
+                        <li>Data Collection & Preparation: Scraped large-scale car listing data from CarDekho. Performed extensive data cleaning, feature engineering, and categorical encoding to handle missing values, outliers, and categorical attributes (fuel type, transmission, owner type, etc.).</li>
+                        <li>Modeling:
+                            <ul>
+                                <li>Implemented deep learning models (CNN, RNN, LSTM) to capture sequential and feature interactions.</li>
+                                <li>Trained machine learning models (Random Forest, XGBoost) for robust baseline predictions.</li>
+                                <li>Designed a hybrid ensemble that combined predictions from deep learning and ML models, balancing generalization and accuracy.</li>
+                            </ul>
+                        </li>
+                        <li>Evaluation: Benchmarked models using metrics like MAE, RMSE, and R². The hybrid ensemble consistently outperformed individual models.</li>
+                        <li>Deployment: Integrated the best-performing model into a Flask-based web application for real-time, user-friendly predictions.</li>
+                    </ul>
+                </p>
+                <h3>Uniqueness &amp; Impact</h3>
+                <p>
+                    <ul>
+                        <li>Performance Improvements: The hybrid model achieved a ~12–15% reduction in RMSE compared to standalone ML or DL models. This demonstrates the complementary strengths of both approaches.</li>
+                        <li>Accessibility: Deployment via Flask enabled real-time predictions through a lightweight web interface, making it accessible to non-technical users.</li>
+                        <li>Scalability and Constraints:
+                            <ul>
+                                <li>Addressed technical constraints such as handling imbalanced categorical features, optimizing training time for deep networks, and ensuring the Flask app remained lightweight for deployment.</li>
+                                <li>Designed modular pipelines for easy retraining when new car data becomes available.</li>
+                            </ul>
+                        </li>
+                        <li>Uniqueness: Unlike traditional price prediction systems, this solution integrates sequential learning (LSTM for mileage/year progression) with structured ML models (Random Forest), creating a hybrid ensemble that improves both interpretability and predictive power.</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Screenshots</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-media placeholder"></div>
+                        <div class="card-body">
+                            <p class="card-desc">Homepage view</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-media placeholder"></div>
+                        <div class="card-body">
+                            <p class="card-desc">Detail view</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Yalavarthi Vignesh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+

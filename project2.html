@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploratory Data Analysis on Water Potability | Yalavarthi Vignesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html#top" class="brand">YV</a>
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Exploratory Data Analysis on Water Potability</h1>
+                <p class="subtitle">Focused on data cleaning, trend analysis, and storytelling with visualizations, highlighting critical patterns in water conditions to support public health decision-making.</p>
+
+                <div class="project-meta" style="margin-top: 18px; color: var(--muted);">
+                    <strong class="accent">Tech Stack:</strong> Python, Pandas, NumPy, Matplotlib and Seaborn
+                </div>
+
+                <div class="project-actions" style="margin-top: 18px; display: flex; gap: 12px;">
+                    <a class="btn primary" href="https://github.com/your-github/your-repo-2" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Overview</h2>
+                <h3>Problem</h3>
+                <p>The dataset contained water quality parameters collected over a decade, with the objective of understanding factors that influence whether water is potable. The main challenge lay in dealing with missing values, noisy measurements, and imbalanced data distribution across parameters such as pH, hardness, solids, chloramines, and sulfate. Extracting meaningful patterns required both rigorous preprocessing and careful visualization choices to avoid misleading interpretations.</p>
+                <h3>Approach</h3>
+                <p>
+                    <ul>
+                        <li>
+                            Data Cleaning & Preprocessing
+                            <ul>
+                                <li>Addressed missing values using statistical imputation (mean/median) where appropriate.</li>
+                                <li>Normalized features like total dissolved solids to ensure fair comparison across different scales.</li>
+                                <li>Handled outliers by applying winsorization and boxplot-based detection methods.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Exploratory Data Analysis (EDA)
+                            <ul>
+                                <li>Used correlation heatmaps, pair plots, and distribution plots (via Seaborn & Matplotlib) to identify interdependencies among features.</li>
+                                <li>Compared potable vs non-potable samples to discover key differences in pH balance, hardness levels, and chloramine concentrations.</li>
+                                <li>Conducted time-series trend analysis to examine changes in water quality over the decade.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Design Choices
+                            <ul>
+                                <li>Focused on interpretable visualizations to make the findings useful for both technical and non-technical stakeholders.</li>
+                                <li>Prioritized statistical validity (e.g., using log-transforms for skewed data) over purely aesthetic graphs.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+                <h3>Uniqueness &amp; Impact</h3>
+                <p>
+                    <ul>
+                        <li>Identified 3–4 key features strongly correlated with potability (notably pH, hardness, sulfate, and chloramines).</li>
+                        <li>Found that only ~40% of the samples qualified as potable, highlighting a significant risk area.</li>
+                        <li>Provided clear, data-driven insights that could guide water treatment interventions and further predictive modeling.</li>
+                    </ul>
+                </p>
+                <h3>Trades-offs</h3>
+                <p>
+                    <ul>
+                        <li>Imputation vs. Row Dropping: Retained more rows by imputing missing values, trading a small risk of bias for a larger, more representative dataset.</li>
+                        <li>Complex vs. Simple Visuals: Chose clarity (heatmaps, bar plots) over overly complex visuals to make results accessible to broader audiences.</li>
+                        <li>Balance Between Statistical Rigor & Usability: Opted for methods that struck a balance between accuracy and interpretability, ensuring findings could be acted upon in real-world scenarios.</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Screenshots</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-media placeholder"></div>
+                        <div class="card-body">
+                            <p class="card-desc">Mobile view</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-media placeholder"></div>
+                        <div class="card-body">
+                            <p class="card-desc">Dashboard view</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Yalavarthi Vignesh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
